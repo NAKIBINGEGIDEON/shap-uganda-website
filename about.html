@@ -3,7 +3,185 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SHAP-Uganda</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --main-green: #198754; /* Green for main theme */
+            --main-maroon: #800000; /* Maroon for highlights */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .custom-navbar {
+            background-color: var(--main-green);
+        }
+
+        .custom-navbar .nav-link {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .custom-navbar .nav-link:hover {
+            color: var(--main-maroon);
+        }
+
+        .hero-section {
+            background-color: var(--main-green);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .section-header {
+            color: var(--main-green);
+        }
+
+        .section-content h4 {
+            color: var(--main-maroon);
+        }
+
+        .section-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section-content ul li::before {
+            content: "✓";
+            color: var(--main-green);
+            margin-right: 10px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--main-maroon);
+            border: none;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--main-green);
+            color: white;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .image-section {
+            margin-top: 40px;
+        }
+
+        .image-section h4 {
+            color: var(--main-green);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">SHAP-Uganda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary-custom text-white px-4" href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">About Us</h1>
+            <p class="lead">Learn more about SHAP-Uganda and our mission to transform communities for better health outcomes.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-header">Who We Are</h2>
+            </div>
+            <div class="section-content">
+                <p>KAN Sustainable Health Action for Development (SHAP-Uganda) Limited is a not-for-profit organization founded in 2021 by passionate public health professionals. Our mission is to provide sustainable, integrated, and high-quality health care services to marginalized and vulnerable individuals through community-driven interventions.</p>
+
+                <div class="image-section">
+                    <h4 class="text-center">Our Team and Fieldwork</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="assets/images/team.jpg" alt="SHAP-Uganda Team">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="assets/images/fieldwork.jpg" alt="Community Health Fieldwork">
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Where We Work</h4>
+                <p>We operate in Kamuli, Luuka, Buyende, Kayunga, and Namutumba Districts, focusing on:</p>
+                <ul>
+                    <li>Maternal, Newborn, Child, and Adolescent Health Services</li>
+                    <li>Communicable and Non-Communicable Disease Prevention</li>
+                    <li>Community Health Initiatives</li>
+                    <li>School and Environmental Health Programs</li>
+                </ul>
+
+                <h4>Our Vision</h4>
+                <p>A transformed community for better health outcomes.</p>
+
+                <h4>Our Mission</h4>
+                <p>To improve accessibility to sustainable quality health care through empowering vulnerable communities and strengthening existing health structures.</p>
+
+                <h4>Our Core Values</h4>
+                <ul>
+                    <li><strong>Transparency:</strong> Openly sharing information and accountability.</li>
+                    <li><strong>Inclusiveness & Equity:</strong> Ensuring no one is left behind.</li>
+                    <li><strong>Professionalism:</strong> Upholding ethical standards and respect.</li>
+                    <li><strong>Innovativeness:</strong> Encouraging creativity and sustainability.</li>
+                    <li><strong>Accountability:</strong> Responsible use of resources and stakeholder trust.</li>
+                </ul>
+
+                <div class="text-center mt-5">
+                    <a href="programs.html" class="btn btn-primary-custom btn-lg">Explore Our Programs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 SHAP-Uganda. All Rights Reserved. | <a href="contact.html" class="text-decoration-none text-white">Contact Us</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+device-width, initial-scale=1.0">
     <title>About Us - SHAP-Uganda</title>
 
     <!-- Bootstrap CSS -->
