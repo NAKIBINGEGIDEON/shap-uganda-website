@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - SHAP-Uganda</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --main-green: #198754;
+            --main-maroon: #800000;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .custom-navbar {
+            background-color: var(--main-green);
+        }
+
+        .custom-navbar .nav-link {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .custom-navbar .nav-link:hover {
+            color: var(--main-maroon);
+        }
+
+        .hero-section {
+            background-color: var(--main-green);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--main-maroon);
+            border: none;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--main-green);
+            color: white;
+        }
+
+        .donation-section {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">SHAP-Uganda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary-custom text-white px-4" href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Support Our Mission</h1>
+            <p class="lead">Your generosity helps us improve health outcomes for the most vulnerable communities.</p>
+            <a href="#donate-now" class="btn btn-primary-custom px-4">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Donation Options -->
+    <section id="donate-now" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4 section-header" style="color: var(--main-green);">How You Can Help</h2>
+            <div class="row gy-4">
+                <!-- Monthly Donation -->
+                <div class="col-md-4">
+                    <div class="donation-section text-center">
+                        <h4 class="fw-bold">Monthly Donation</h4>
+                        <p>Provide consistent support to fund ongoing programs and initiatives.</p>
+                        <a href="#donation-form" class="btn btn-primary-custom px-4">Donate Monthly</a>
+                    </div>
+                </div>
+                <!-- One-Time Donation -->
+                <div class="col-md-4">
+                    <div class="donation-section text-center">
+                        <h4 class="fw-bold">One-Time Donation</h4>
+                        <p>Make a one-time impact to help communities in need.</p>
+                        <a href="#donation-form" class="btn btn-primary-custom px-4">Donate Once</a>
+                    </div>
+                </div>
+                <!-- Sponsor a Program -->
+                <div class="col-md-4">
+                    <div class="donation-section text-center">
+                        <h4 class="fw-bold">Sponsor a Program</h4>
+                        <p>Choose a specific program to support and see the direct impact of your contribution.</p>
+                        <a href="programs.html" class="btn btn-primary-custom px-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4 section-header" style="color: var(--main-green);">Make a Donation</h2>
+            <form id="donation-form">
+                <div class="row gy-3">
+                    <!-- Name -->
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+                <div class="row gy-3 mt-3">
+                    <!-- Amount -->
+                    <div class="col-md-6">
+                        <label for="amount" class="form-label">Donation Amount</label>
+                        <input type="number" class="form-control" id="amount" placeholder="Enter amount (USD)" required>
+                    </div>
+                    <!-- Payment Method -->
+                    <div class="col-md-6">
+                        <label for="payment-method" class="form-label">Payment Method</label>
+                        <select id="payment-method" class="form-select" required>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="mobile-money">Mobile Money</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Message -->
+                <div class="mt-3">
+                    <label for="message" class="form-label">Message (Optional)</label>
+                    <textarea id="message" class="form-control" rows="4" placeholder="Leave a message for us"></textarea>
+                </div>
+                <!-- Submit Button -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary-custom px-4">Donate Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 SHAP-Uganda. All Rights Reserved. | <a href="contact.html" class="text-decoration-none text-white">Contact Us</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
