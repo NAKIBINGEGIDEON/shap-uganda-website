@@ -34,6 +34,17 @@
             color: var(--main-maroon);
         }
 
+        .navbar-brand img {
+            height: 40px; /* Adjust height as needed */
+            margin-right: 10px;
+        }
+
+        .navbar-brand span {
+            color: white;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
         .hero-section {
             background-color: var(--main-green);
             color: white;
@@ -119,88 +130,6 @@
         .text-block {
             margin-bottom: 40px;
         }
-
-        /* Responsive Typography */
-        @media (max-width: 1200px) {
-            .section-header {
-                font-size: 1.8rem;
-            }
-
-            .section-content h4 {
-                font-size: 1.3rem;
-            }
-
-            .section-content p {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .section-header {
-                font-size: 1.6rem;
-            }
-
-            .section-content h4 {
-                font-size: 1.2rem;
-            }
-
-            .section-content p {
-                font-size: 1rem;
-            }
-
-            .hero-section {
-                padding: 60px 20px;
-            }
-
-            .image-section img {
-                margin-top: 10px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 50px 20px;
-            }
-
-            .section-header {
-                font-size: 1.4rem;
-            }
-
-            .section-content h4 {
-                font-size: 1.1rem;
-            }
-
-            .section-content p {
-                font-size: 1rem;
-            }
-
-            .text-block {
-                margin-bottom: 30px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-section {
-                padding: 40px 20px;
-            }
-
-            .section-header {
-                font-size: 1.2rem;
-            }
-
-            .section-content h4 {
-                font-size: 1.1rem;
-            }
-
-            .section-content p {
-                font-size: 0.9rem;
-            }
-
-            .btn-primary-custom {
-                font-size: 0.9rem;
-                padding: 10px 20px;
-            }
-        }
     </style>
 </head>
 
@@ -208,7 +137,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#">SHAP-Uganda</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/images/logo.png" alt="SHAP-Uganda Logo">
+                <span>SHAP-Uganda</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -241,52 +173,6 @@
             </div>
             <div class="section-content text-block">
                 <p>KAN Sustainable Health Action for Development (SHAP-Uganda) Limited is a not-for-profit organization founded in <span class="highlight">2021</span> by passionate public health professionals. Our mission is to provide sustainable, integrated, and high-quality health care services to marginalized and vulnerable individuals through community-driven interventions.</p>
-
-                <div class="image-section">
-                    <h4 class="text-center">Our Team & Work in the Field</h4>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="assets/images/1.jpg" alt="SHAP-Uganda Team">
-                        </div>
-                        <div class="col-md-6">
-                            <img src="assets/images/5.jpg" alt="Community Health Fieldwork">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-block">
-                    <h4>Where We Work</h4>
-                    <p>We operate in Kamuli, Luuka, Buyende, Kayunga, and Namutumba Districts, focusing on:</p>
-                    <ul>
-                        <li>Maternal, Newborn, Child, and Adolescent Health Services</li>
-                        <li>Communicable and Non-Communicable Disease Prevention</li>
-                        <li>Community Health Initiatives</li>
-                        <li>School and Environmental Health Programs</li>
-                    </ul>
-                </div>
-
-                <div class="text-block">
-                    <h4>Our Vision</h4>
-                    <p>A <span class="highlight">transformed community</span> for better health outcomes.</p>
-
-                    <h4>Our Mission</h4>
-                    <p>To improve accessibility to sustainable quality health care by empowering vulnerable communities and strengthening existing health structures.</p>
-                </div>
-
-                <div class="text-block">
-                    <h4>Our Core Values</h4>
-                    <ul>
-                        <li><strong>Transparency:</strong> Openly sharing information and accountability.</li>
-                        <li><strong>Inclusiveness & Equity:</strong> Ensuring no one is left behind.</li>
-                        <li><strong>Professionalism:</strong> Upholding ethical standards and respect.</li>
-                        <li><strong>Innovativeness:</strong> Encouraging creativity and sustainability.</li>
-                        <li><strong>Accountability:</strong> Responsible use of resources and stakeholder trust.</li>
-                    </ul>
-                </div>
-
-                <div class="text-center mt-5">
-                    <a href="programs.html" class="btn btn-primary-custom btn-lg">Explore Our Programs</a>
-                </div>
             </div>
         </div>
     </section>
