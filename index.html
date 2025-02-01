@@ -27,18 +27,17 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* White Logo Styling */
+        /* Logo Styling */
         .logo-svg {
             width: 140px;
             height: auto;
             transition: all 0.3s ease;
-            filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
         .logo-svg:hover {
             transform: scale(1.05);
-            filter: brightness(0) invert(1) drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-            opacity: 0.9;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
         }
 
         /* Navigation */
@@ -73,6 +72,11 @@
             margin: 0 auto;
         }
 
+        .carousel-caption h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+        }
+
         /* Buttons */
         .btn-cta {
             background-color: var(--cta-maroon);
@@ -87,6 +91,19 @@
             transform: translateY(-2px);
         }
 
+        /* Content Section */
+        .introduction {
+            padding: 80px 20px;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-green);
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             body {
@@ -97,6 +114,9 @@
             }
             .logo-svg {
                 width: 100px;
+            }
+            .carousel-caption h1 {
+                font-size: 1.8rem;
             }
             .nav-link {
                 font-size: 1rem;
@@ -167,7 +187,7 @@
 
     <!-- Main Content -->
     <main>
-        <section id="mission" class="py-5">
+        <section id="mission" class="introduction">
             <div class="container text-center">
                 <h2 class="display-5 mb-4" style="color: var(--cta-maroon);">Our Mission</h2>
                 <p class="lead mb-4">To create sustainable health solutions through community empowerment, education, and innovative programming.</p>
@@ -205,8 +225,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer bg-primary-green text-white py-4">
-        <div class="container">
+    <footer class="footer">
+        <div class="container text-center">
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <h4>Contact Us</h4>
@@ -220,22 +240,22 @@
                 <div class="col-md-4 mb-4">
                     <h4>Quick Links</h4>
                     <nav class="nav flex-column">
-                        <a class="nav-link text-white" href="about.html">About Us</a>
-                        <a class="nav-link text-white" href="programs.html">Our Programs</a>
-                        <a class="nav-link text-white" href="contact.html">Get Involved</a>
+                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="programs.html">Our Programs</a>
+                        <a class="nav-link" href="contact.html">Get Involved</a>
                     </nav>
                 </div>
                 <div class="col-md-4 mb-4">
                     <h4>Follow Us</h4>
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="#" class="text-white"><i class="bi bi-facebook fs-3"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-twitter fs-3"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-instagram fs-3"></i></a>
+                    <div class="social-links">
+                        <a href="#" class="text-white mx-3"><i class="bi bi-facebook fs-3"></i></a>
+                        <a href="#" class="text-white mx-3"><i class="bi bi-twitter fs-3"></i></a>
+                        <a href="#" class="text-white mx-3"><i class="bi bi-instagram fs-3"></i></a>
                     </div>
                 </div>
             </div>
-            <hr>
-            <p class="text-center mb-0">&copy; 2025 SHAP-Uganda. All rights reserved.</p>
+            <hr class="mb-4">
+            <p class="mb-0">&copy; 2025 SHAP-Uganda. All rights reserved.</p>
         </div>
     </footer>
 
