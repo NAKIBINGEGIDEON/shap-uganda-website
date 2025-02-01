@@ -18,190 +18,267 @@
 
         body {
             font-family: Arial, sans-serif;
+            padding-top: 120px; /* Adjusted for taller navbar */
         }
 
         .custom-navbar {
             background-color: var(--primary-green);
+            min-height: 100px;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Logo container styling */
+        .logo-container {
+            background-color: var(--cta-maroon);
+            padding: 12px;
+            border-radius: 10px;
+            margin-right: 20px;
+            border: 2px solid white;
         }
 
         .navbar-brand {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.02);
         }
 
         .navbar-brand img {
-            height: 60px;
+            height: 80px;
             width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
         .navbar-brand span {
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            font-weight: bold;
         }
 
         .nav-link {
             color: #fff !important;
+            font-size: 1.1rem;
+            padding: 10px 20px !important;
+            transition: all 0.3s ease;
         }
 
         .nav-link:hover {
             color: var(--cta-maroon) !important;
+            transform: translateY(-2px);
         }
 
         .hero {
             position: relative;
             overflow: hidden;
+            margin-top: -120px; /* Offset navbar height */
         }
 
-        .carousel-caption h1,
-        .carousel-caption h3 {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        .carousel-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
         }
 
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            filter: invert(1);
+        .carousel-caption {
+            background: rgba(0,0,0,0.5);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
         }
 
         .btn-cta {
             background-color: var(--cta-maroon);
             color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
         .btn-cta:hover {
             background-color: #660000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .introduction {
-            padding: 50px 20px;
-            background-color: #f9f9f9;
-            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
         }
 
         .footer {
             background-color: var(--primary-green);
-            color: #fff;
-            padding: 20px 0;
+            padding: 40px 0;
+            margin-top: 80px;
         }
 
         .footer a {
-            color: #fff;
-            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .footer a:hover {
-            color: var(--cta-maroon);
-            text-decoration: underline;
+        @media (max-width: 768px) {
+            .navbar-brand span {
+                font-size: 1.5rem;
+            }
+            .navbar-brand img {
+                height: 60px;
+            }
+            .logo-container {
+                padding: 8px;
+                margin-right: 10px;
+            }
+            body {
+                padding-top: 90px;
+            }
+            .hero {
+                margin-top: -90px;
+            }
         }
     </style>
 
-    <!-- Optional Bootstrap Icons -->
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <!-- Fixed Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top shadow-sm">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="assets/images/logo.png" alt="SHAP-Uganda Logo">
+                <div class="logo-container">
+                    <img src="assets/images/logo.png" alt="SHAP-Uganda Logo">
+                </div>
                 <span>SHAP-Uganda</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link btn-cta" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link btn-cta" href="donate.html">Donate Now</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Carousel -->
     <header class="hero">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url('assets/images/4.jpg'); background-size: cover; background-position: center; height: 100vh;">
-                    <div class="carousel-caption d-flex align-items-center justify-content-center" style="height: 100%;">
-                        <div>
-                            <h1 class="display-4 fw-bold">Welcome to SHAP-Uganda</h1>
-                            <p class="lead">Sustainable Health Action for Development</p>
-                            <a href="donate.html" class="btn btn-cta">Support Us</a>
-                        </div>
+                <div class="carousel-item active" style="background-image: url('assets/images/4.jpg')">
+                    <div class="carousel-caption">
+                        <h1>Empowering Healthy Communities</h1>
+                        <p class="lead">Sustainable solutions for lasting health impact</p>
+                        <a href="#mission" class="btn btn-cta mt-3">Learn More</a>
                     </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url('assets/images/2.jpg'); background-size: cover; background-position: center; height: 100vh;">
-                    <div class="carousel-caption d-flex align-items-center justify-content-center" style="height: 100%;">
-                        <div>
-                            <h1 class="display-4 fw-bold">Health Promotion</h1>
-                            <p class="lead">Empowering communities for better health.</p>
-                        </div>
+                <div class="carousel-item" style="background-image: url('assets/images/2.jpg')">
+                    <div class="carousel-caption">
+                        <h1>Community Health Initiatives</h1>
+                        <p class="lead">Bringing healthcare closer to people</p>
                     </div>
                 </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url('assets/images/6.jpg'); background-size: cover; background-position: center; height: 100vh;">
-                    <div class="carousel-caption d-flex align-items-center justify-content-center" style="height: 100%;">
-                        <div>
-                            <h1 class="display-4 fw-bold">Community Health Initiatives</h1>
-                            <p class="lead">Making healthcare accessible to all.</p>
-                        </div>
+                <div class="carousel-item" style="background-image: url('assets/images/6.jpg')">
+                    <div class="carousel-caption">
+                        <h1>Education & Prevention</h1>
+                        <p class="lead">Building healthier futures through knowledge</p>
                     </div>
                 </div>
             </div>
-            <!-- Controls -->
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon"></span>
             </button>
         </div>
     </header>
 
-    <!-- Introduction Section -->
-    <section class="introduction">
-        <div class="container">
-            <h2 class="fw-bold" style="color: var(--primary-green);">Our Mission</h2>
-            <p class="lead">To enhance health outcomes through sustainable community-driven solutions.</p>
-            <a href="about.html" class="btn btn-cta">Learn More</a>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <section id="mission" class="introduction">
+            <div class="container text-center">
+                <h2 class="display-4 mb-4" style="color: var(--cta-maroon);">Our Mission</h2>
+                <p class="lead mb-4">To create sustainable health solutions through community empowerment, education, and innovative programming.</p>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-heart-pulse fs-1 text-muted"></i>
+                                <h3>Health Services</h3>
+                                <p>Mobile clinics and community health outreach programs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-book fs-1 text-muted"></i>
+                                <h3>Education</h3>
+                                <p>Health literacy programs and preventive care training</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-people fs-1 text-muted"></i>
+                                <h3>Community</h3>
+                                <p>Empowering local leaders and sustainable development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container">
-            <p>&copy; 2025 SHAP-Uganda. All Rights Reserved.</p>
-            <p>
-                <a href="about.html">About Us</a> | 
-                <a href="programs.html">Programs</a> | 
-                <a href="contact.html">Contact</a> | 
-                <a href="donate.html">Donate</a>
-            </p>
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4>Contact Us</h4>
+                    <p>Kampala, Uganda<br>Email: info@shapuganda.org<br>Phone: +256 712 345 678</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Quick Links</h4>
+                    <nav class="nav flex-column">
+                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="programs.html">Our Programs</a>
+                        <a class="nav-link" href="contact.html">Get Involved</a>
+                    </nav>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="mb-0">&copy; 2025 SHAP-Uganda. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
