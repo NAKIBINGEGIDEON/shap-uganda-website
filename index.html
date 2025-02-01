@@ -19,40 +19,31 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            padding-top: 60px;
+            padding-top: 55px; /* Reduced body padding */
         }
 
         /* Ultra-Compact Header */
         .custom-navbar {
             background-color: #ffffff;
             padding: 2px 0;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             border-bottom: 1px solid #eeeeee;
             min-height: 55px;
         }
 
-        /* Enhanced Logo Visibility */
-        .navbar-brand {
-            padding: 0;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-        }
-
+        /* Maintain Logo Size */
         .logo-svg {
-            width: 220px;
+            width: 200px;
             height: auto;
             margin-left: 10px;
-            transform: scale(1.2);
-            transform-origin: left center;
         }
 
-        /* Compact Navigation */
+        /* Tight Navigation */
         .nav-link {
             color: var(--text-dark) !important;
             font-size: 0.88rem;
-            padding: 3px 8px !important;
-            white-space: nowrap;
+            padding: 2px 8px !important;
+            margin: 0 1px;
         }
 
         .nav-link:hover {
@@ -62,15 +53,15 @@
         .btn-cta {
             background-color: var(--cta-maroon);
             color: #fff !important;
-            padding: 5px 12px;
-            border-radius: 5px;
+            padding: 4px 12px;
+            border-radius: 4px;
             font-size: 0.88rem;
             margin-left: 8px;
         }
 
         /* Hero Adjustments */
         .hero {
-            margin-top: -60px;
+            margin-top: -55px;
         }
 
         .carousel-item {
@@ -81,8 +72,8 @@
 
         .carousel-caption {
             background: rgba(0,0,0,0.6);
-            padding: 20px;
-            border-radius: 10px;
+            padding: 15px;
+            border-radius: 8px;
             width: 90%;
             margin: 0 auto;
         }
@@ -91,21 +82,23 @@
             body {
                 padding-top: 50px;
             }
+            .custom-navbar {
+                min-height: 50px;
+            }
             .logo-svg {
-                width: 180px;
-                transform: scale(1);
+                width: 160px;
                 margin-left: 5px;
             }
             .nav-link {
                 font-size: 0.82rem;
-                padding: 2px 5px !important;
+                padding: 1px 4px !important;
             }
             .btn-cta {
-                padding: 4px 10px;
+                padding: 3px 8px;
                 margin-left: 5px;
             }
             .carousel-caption h1 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -172,16 +165,16 @@
 
     <!-- Main Content -->
     <main>
-        <section id="mission" class="py-5">
+        <section id="mission" class="py-4">
             <div class="container text-center">
-                <h2 class="display-6 mb-4" style="color: var(--cta-maroon);">Our Mission</h2>
-                <p class="mb-4">To create sustainable health solutions through community empowerment, education, and innovative programming.</p>
-                <div class="row g-3">
+                <h2 class="h3 mb-3" style="color: var(--cta-maroon);">Our Mission</h2>
+                <p class="mb-3">To create sustainable health solutions through community empowerment, education, and innovative programming.</p>
+                <div class="row g-2">
                     <div class="col-md-4">
                         <div class="card h-100 shadow-sm">
                             <div class="card-body">
-                                <i class="bi bi-heart-pulse fs-2 text-muted mb-2"></i>
-                                <h3>Health Services</h3>
+                                <i class="bi bi-heart-pulse fs-4 text-muted mb-2"></i>
+                                <h3 class="h5">Health Services</h3>
                                 <p class="small">Mobile clinics and community health outreach programs</p>
                             </div>
                         </div>
@@ -189,8 +182,8 @@
                     <div class="col-md-4">
                         <div class="card h-100 shadow-sm">
                             <div class="card-body">
-                                <i class="bi bi-book fs-2 text-muted mb-2"></i>
-                                <h3>Education</h3>
+                                <i class="bi bi-book fs-4 text-muted mb-2"></i>
+                                <h3 class="h5">Education</h3>
                                 <p class="small">Health literacy programs and preventive care training</p>
                             </div>
                         </div>
@@ -198,8 +191,8 @@
                     <div class="col-md-4">
                         <div class="card h-100 shadow-sm">
                             <div class="card-body">
-                                <i class="bi bi-people fs-2 text-muted mb-2"></i>
-                                <h3>Community</h3>
+                                <i class="bi bi-people fs-4 text-muted mb-2"></i>
+                                <h3 class="h5">Community</h3>
                                 <p class="small">Empowering local leaders and sustainable development</p>
                             </div>
                         </div>
@@ -210,19 +203,19 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-green text-white py-4">
+    <footer class="bg-primary-green text-white py-3">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <h5>Contact Us</h5>
-                    <p class="mb-0 small">
+                    <h5 class="h6">Contact Us</h5>
+                    <p class="small mb-0">
                         Kampala, Uganda<br>
                         Email: info@shapuganda.org<br>
                         Phone: +256 767 915 350
                     </p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h5>Quick Links</h5>
+                    <h5 class="h6">Quick Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="about.html" class="text-white text-decoration-none small">About Us</a></li>
                         <li><a href="programs.html" class="text-white text-decoration-none small">Our Programs</a></li>
@@ -230,7 +223,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h5>Follow Us</h5>
+                    <h5 class="h6">Follow Us</h5>
                     <div class="d-flex gap-2">
                         <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
@@ -238,7 +231,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="my-3">
+            <hr class="my-2">
             <p class="text-center mb-0 small">&copy; 2025 SHAP-Uganda. All rights reserved.</p>
         </div>
     </footer>
